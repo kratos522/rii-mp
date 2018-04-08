@@ -37,6 +37,11 @@ class Expediente extends Model
 
   public function recursos()
   {
-      return $this->hasMany(Recurso::class);
+      return $this->hasMany(Recurso::class, 'id_lugar');
+  }
+
+  public function autos()
+  {
+      return $this->hasMany(Auto::class, 'id_lugar');
   }
 }

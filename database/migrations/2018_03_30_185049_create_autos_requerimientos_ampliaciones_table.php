@@ -20,9 +20,7 @@ class CreateAutosRequerimientosAmpliacionesTable extends Migration
             $table->date('fecha_fin')->nullable();
             $table->boolean('deleted')->default(false);
             $table->unsignedInteger('id_denuncia'); //id foranea id_denuncia
-            $table->timestamps();
-
-            $table->foreign('id_denuncia')->references('id')->on('denuncias')->onDelete('cascade'); //Foreign Key Constraints id_denuncia_mp
+            $table->timestamps();            
         });
     }
 

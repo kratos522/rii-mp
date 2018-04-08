@@ -10,11 +10,11 @@ class AutoImputado extends Model
 
     public function auto()
     {
-        return $this->belongsTo(Auto::class);
+        return $this->belongsTo(Auto::class, 'id_auto');
     }
 
     public function imputado()
     {
-        return $this->belongsTo(Imputado::class);
+        return $this->belongsTo(Imputado::class, 'id_imputado');
     }
 }

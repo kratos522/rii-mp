@@ -15,6 +15,16 @@ class Ofendido extends Model
       return $this->morphOne(Rol::class, 'rolable');
   }
 
+  public function recursosofendidos()
+  {
+      return $this->hasMany(RecursoOfendido::class, 'id_ofendido');
+  }
+
+  public function autoofendidos()
+  {
+      return $this->hasMany(AutoOfendido::class, 'id_ofendido');
+  }
+
   public function denuncia()
   {
       return $this->belongsTo(Denuncia::class);

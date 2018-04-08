@@ -18,10 +18,7 @@ class CreateAutosImputadosTable extends Migration
             $table->unsignedInteger('id_auto'); //id foranea id_auto
             $table->unsignedInteger('id_imputado'); //id foranea id_imputado
             $table->boolean('deleted')->default(false);
-            $table->timestamps();
-
-            $table->foreign('id_auto')->references('id')->on('autos')->onDelete('cascade'); //Foreign Key Constraints id_ofendido
-            $table->foreign('id_imputado')->references('id')->on('imputados')->onDelete('cascade'); //Foreign Key Constraints id_imputado
+            $table->timestamps();          
         });
     }
 

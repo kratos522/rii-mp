@@ -18,10 +18,7 @@ class CreateAutosOfendidosTable extends Migration
             $table->unsignedInteger('id_auto'); //id foranea id_auto
             $table->unsignedInteger('id_ofendido'); //id foranea id_ofendido
             $table->boolean('deleted')->default(false);
-            $table->timestamps();
-
-            $table->foreign('id_auto')->references('id')->on('autos')->onDelete('cascade'); //Foreign Key Constraints id_ofendido
-            $table->foreign('id_ofendido')->references('id')->on('ofendidos')->onDelete('cascade'); //Foreign Key Constraints id_ofendido
+            $table->timestamps();            
         });
     }
 

@@ -84,12 +84,12 @@ class Denuncia extends Model
 
   public function autorequerimientoamplicacion()
   {
-      return $this->hasMany(AutoRequerimientoAmpliacion::class);
+      return $this->hasMany(AutoRequerimientoAmpliacion::class, 'id_denuncia');
   }
 
   public function autorequerimientoinvestigativo()
   {
-      return $this->hasMany(AutoRequerimientoInvestigativo::class);
+      return $this->hasMany(AutoRequerimientoInvestigativo::class, 'id_denuncia');
   }
 
 }

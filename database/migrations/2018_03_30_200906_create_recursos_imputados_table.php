@@ -18,10 +18,7 @@ class CreateRecursosImputadosTable extends Migration
             $table->unsignedInteger('id_recurso'); //id foranea id_auto
             $table->unsignedInteger('id_imputado'); //id foranea id_imputado
             $table->boolean('deleted')->default(false);
-            $table->timestamps();
-
-            $table->foreign('id_recurso')->references('id')->on('recursos'); //Foreign Key Constraints id_ofendido
-            $table->foreign('id_imputado')->references('id')->on('imputados'); //Foreign Key Constraints id_imputado
+            $table->timestamps();            
         });
     }
 

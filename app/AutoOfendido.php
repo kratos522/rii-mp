@@ -10,11 +10,11 @@ class AutoOfendido extends Model
 
     public function auto()
     {
-        return $this->belongsTo(Auto::class);
+        return $this->belongsTo(Auto::class, 'id_auto');
     }
 
     public function ofendido()
     {
-        return $this->belongsTo(Ofendido::class);
+        return $this->belongsTo(Ofendido::class, 'id_ofendido');
     }
 }

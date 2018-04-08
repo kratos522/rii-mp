@@ -18,10 +18,7 @@ class CreateRecursosOfendidosTable extends Migration
             $table->unsignedInteger('id_recurso'); //id foranea id_recurso
             $table->unsignedInteger('id_ofendido'); //id foranea id_ofendido
             $table->boolean('deleted')->default(false);
-            $table->timestamps();
-
-            $table->foreign('id_recurso')->references('id')->on('recursos'); //Foreign Key Constraints id_ofendido
-            $table->foreign('id_ofendido')->references('id')->on('ofendidos'); //Foreign Key Constraints id_ofendido
+            $table->timestamps();            
         });
     }
 

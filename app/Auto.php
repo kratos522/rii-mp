@@ -25,27 +25,27 @@ class Auto extends Model
 
     public function autoimputados()
     {
-        return $this->hasMany(AutoImputado::class);
+        return $this->hasMany(AutoImputado::class, 'id_auto');
     }
 
     public function autoofendidos()
     {
-        return $this->hasMany(AutoOfendido::class);
+        return $this->hasMany(AutoOfendido::class, 'id_auto');
     }
 
     public function lugar()
     {
-        return $this->belongsTo(Lugar::class);
+        return $this->belongsTo(Lugar::class, 'id_lugar');
     }
 
     public function expediente()
     {
-        return $this->belongsTo(Expediente::class);
+        return $this->belongsTo(Expediente::class, 'id_expediente');
     }
 
     public function fiscalia()
     {
-        return $this->belongsTo(Fiscalia::class);
+        return $this->belongsTo(Fiscalia::class, 'id_fiscalia');
     }
 
     public function autoable()

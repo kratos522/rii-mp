@@ -21,6 +21,6 @@ class AutoRequerimientoAmpliacion extends Model
 
     public function denuncia()
     {
-        return $this->belongsTo(Denuncia::class);
+        return $this->belongsTo(Denuncia::class, 'id_denuncia');
     }
 }

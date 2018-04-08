@@ -25,27 +25,27 @@ class Recurso extends Model
 
     public function recursoimputados()
     {
-        return $this->hasMany(RecursoImputado::class);
+        return $this->hasMany(RecursoImputado::class, 'id_recurso');
     }
 
-    public function recursoreposicion()
+    public function recursosofendidos()
     {
-        return $this->hasMany(RecursoReposicion::class);
+        return $this->hasMany(RecursoOfendido::class, 'id_recurso');
     }
 
     public function lugar()
     {
-        return $this->belongsTo(Lugar::class);
+        return $this->belongsTo(Lugar::class, 'id_lugar');
     }
 
     public function expediente()
     {
-        return $this->belongsTo(Expediente::class);
+        return $this->belongsTo(Expediente::class, 'id_expediente');
     }
 
     public function fiscalia()
     {
-        return $this->belongsTo(Fiscalia::class);
+        return $this->belongsTo(Fiscalia::class, 'id_fiscalia');
     }
 
     public function recursable()

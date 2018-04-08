@@ -4,16 +4,15 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class RecursoImputado extends Model
+class RecursoOfendido extends Model
 {
-
   public function recurso()
   {
       return $this->belongsTo(Recurso::class, 'id_recurso');
   }
 
-  public function imputado()
+  public function ofendido()
   {
-      return $this->belongsTo(Imputado::class, 'id_imputado');
+      return $this->belongsTo(Ofendido::class, 'id_ofendido');
   }
 }

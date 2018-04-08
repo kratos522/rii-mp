@@ -34,29 +34,24 @@ class Imputado extends Model
       return $this->belongsTo(Denuncia::class);
   }
 
-  public function fiscales()
-  {
-      return $this->hasMany(FiscalAsignado::class);
-  }
-
-  public function fiscales()
-  {
-      return $this->hasMany(FiscalAsignado::class);
-  }
-
-  public function autoimputados()
-  {
-      return $this->hasMany(AutoImputado::class);
-  }
-
   public function recursoimputados()
   {
-      return $this->hasMany(RecursoImputado::class);
+      return $this->hasMany(RecursoImputado::class, 'id_imputado');
   }
 
   public function autoimputados()
   {
-      return $this->hasMany(AutoImputado::class);
+      return $this->hasMany(AutoImputado::class, 'id_imputado');
+  }
+
+  public function fiscales()
+  {
+      return $this->hasMany(FiscalAsignado::class);
+  }
+
+  public function fiscales()
+  {
+      return $this->hasMany(FiscalAsignado::class);
   }
 
   public function fiscalias()
